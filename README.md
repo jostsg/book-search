@@ -1,4 +1,4 @@
-# Book search
+# Book Search
 
 # Setup
 - `npm install`

@@ -18,7 +18,6 @@ export default class IqForm extends HTMLElement {
     let $form = this.querySelector('form')
 
     $form.addEventListener('submit', async (event) => {
-      console.log('hi')
       event.preventDefault()
       let $remoteDocument = await this.fetchDocument($form.action, new FormData($form))
       let $target = $remoteDocument.querySelector(selector)
