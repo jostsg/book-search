@@ -1,0 +1,48 @@
+{
+  "name": "book-search",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "forever": "forever -w index.js",
+    "build-css": "node-sass -o dist/ --output-style compressed --source-map true --source-map-contents src/client/styles/",
+    "watch-css": "node-sass -w -r -o dist/ --source-map true --source-map-contents src/client/styles/",
+    "build-js": "rollup -c",
+    "watch-js": "rollup -c -w",
+    "watch": "$npm_execpath run watch-js & $npm_execpath run watch-css",
+    "build": "$npm_execpath run build-js && $npm_execpath run build-css",
+    "dev": "$npm_execpath run watch & $npm_execpath run forever",
+    "start": "node ."
+  },
+  "babel": {
+    "presets": [
+      "es2015-rollup"
+    ]
+  },
+  "devDependencies": {
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "forever": "^0.15.3",
+    "node-sass": "^4.5.3",
+    "rollup": "^0.41.6",
+    "rollup-plugin-butternut": "^0.1.0",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-watch": "^3.2.2"
+  },
+  "dependencies": {
+    "document-register-element": "^1.4.1",
+    "handlebars": "^4.0.8",
+    "hapi": "^16.1.1",
+    "inert": "^4.2.0",
+    "normalize.css": "^7.0.0",
+    "request": "^2.81.0",
+    "sass-mq": "^3.3.2",
+    "uitil": "^1.8.0",
+    "vision": "^4.1.1"
+  }
+}

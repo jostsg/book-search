@@ -1,0 +1,55 @@
+.c-button {
+  vertical-align: middle;
+  font: inherit;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  @include font-size(16px);
+  background: none;
+  color: inherit;
+  padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+}
+
+.c-button--flush {
+  padding: 0;
+}
+
+.c-button--flat {
+  border-radius: 2px;
+  background-color: rgb(242, 242, 242);
+}
+
+.c-button--primary {
+  border-radius: 2px;
+  background-color: #394A59;
+  color: #fff;
+}
+
+.c-button[disabled] {
+  background-color: #aaa;
+  color: #ccc;
+}
+
+.c-button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.c-button-text {
+  display: inline-block;
+  margin-left: $global-spacing-unit-tiny;
+}
+
+.c-button__icon {
+  font-size: 1.5em;
+}
+
+.c-button__group {
+  display: flex;
+  align-items: center;
+}
+
+.c-button--small {
+  @include font-size(12px)
+}
