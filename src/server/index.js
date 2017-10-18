@@ -23,7 +23,6 @@ server.register([
     path: 'views',
     layout: true,
     layoutPath: path.join('views', 'layouts'),
-    partialsPath: path.join('views', 'partials')
   })
 
   server.route(IndexRoute.get('/'))
